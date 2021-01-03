@@ -1,6 +1,5 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
-    //引入第三方库版本管理脚本
     apply from: 'versions.gradle'
 
     ext.kotlin_version = "1.4.10"
@@ -26,4 +25,13 @@ allprojects {
 
 task clean(type: Delete) {
     delete rootProject.buildDir
+}
+
+ext {
+    // Sdk and tools
+    //localBuildToolsVersion是gradle.properties中的数据
+    buildToolsVersion = "30.0.2"
+    compileSdkVersion = 30
+    minSdkVersion = 22
+    targetSdkVersion = 30
 }
