@@ -1,31 +1,27 @@
 package com.jim.lib_common.app;
 
 import android.app.Application;
+import android.content.Context;
 
+import com.alibaba.android.arouter.BuildConfig;
 import com.alibaba.android.arouter.launcher.ARouter;
 
 public class BaseApplication extends Application {
+
+    private static Context mContext;
+
     @Override
     public void onCreate() {
         super.onCreate();
-        if(isDebug()) {
-//            ARouter.openLog();
+        mContext = this;
+        if(BuildConfig.DEBUG) {
+            ARouter.openLog();
             ARouter.openDebug();
         }
         ARouter.init(this);
     }
 
-    private boolean isDebug() {
-        return true;
-    }
-
-    @Override
-    public void onLowMemory() {
-        super.onLowMemory();
-    }
-
-    @Override
-    public void onTerminate() {
-        super.onTerminate();
+    public static Context getContext() {
+        return mContext;
     }
 }
