@@ -31,4 +31,6 @@ public abstract class BaseRedPacketType {
     public void setSum(float sum) {
         this.sum = sum;
     }
+
+    public abstract String getTypeName();
 }

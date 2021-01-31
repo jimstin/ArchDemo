@@ -12,7 +12,7 @@ class GreetingDecorator extends BaseGreeting {
     }
 
     @Override
-    public void showGreeting() {
-        greeting.showGreeting();
+    public String getGreeting() {
+       return greeting.getGreeting();
     }
 }

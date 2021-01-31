@@ -11,4 +11,9 @@ public class PersonalRedPacketType extends BaseRedPacketType {
     public PersonalRedPacketType(float sum) {
         super(1, sum);
     }
+
+    @Override
+    public String getTypeName() {
+        return "好友红包";
+    }
 }

@@ -1,7 +1,7 @@
 package com.jim.archdemo.app.redpack.type;
 
 /**
- * 个人红包（好友红包）
+ * 群聊红包
  */
 public class GroupRedPacketType extends BaseRedPacketType {
     /**
@@ -11,5 +11,10 @@ public class GroupRedPacketType extends BaseRedPacketType {
      */
     public GroupRedPacketType(int amount, float sum) {
         super(amount, sum);
+    }
+
+    @Override
+    public String getTypeName() {
+        return "好友红包";
     }
 }

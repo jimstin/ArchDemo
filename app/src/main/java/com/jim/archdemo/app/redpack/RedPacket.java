@@ -41,4 +41,19 @@ public class RedPacket {
     }
 
 
+    public BaseRedPacketType getType() {
+        return type;
+    }
+
+    public void setType(BaseRedPacketType type) {
+        this.type = type;
+    }
+
+    public BaseGreeting getGreeting() {
+        return greeting;
+    }
+
+    public void setGreeting(BaseGreeting greeting) {
+        this.greeting = greeting;
+    }
 }

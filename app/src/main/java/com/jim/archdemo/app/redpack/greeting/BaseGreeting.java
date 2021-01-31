@@ -5,9 +5,8 @@ package com.jim.archdemo.app.redpack.greeting;
  */
 public abstract class BaseGreeting {
 
-
     /**
      * 显示问候语
      */
-    public abstract void showGreeting();
+    public abstract String getGreeting();
 }

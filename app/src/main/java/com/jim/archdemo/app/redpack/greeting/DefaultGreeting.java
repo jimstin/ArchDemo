@@ -8,7 +8,7 @@ import com.jim.lib_common.utl.LogUtil;
 public class DefaultGreeting extends BaseGreeting {
 
     @Override
-    public void showGreeting() {
-        LogUtil.d("这是默认文本问候语");
+    public String getGreeting() {
+        return "这是默认文本问候语";
     }
 }

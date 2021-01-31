@@ -1,7 +1,5 @@
 package com.jim.archdemo.app.redpack.greeting;
 
-import com.jim.lib_common.utl.LogUtil;
-
 public class ImageGreeting extends GreetingDecorator {
 
     public ImageGreeting(BaseGreeting greeting) {
@@ -9,13 +7,11 @@ public class ImageGreeting extends GreetingDecorator {
     }
 
     @Override
-    public void showGreeting() {
-        super.showGreeting();
-
-        addImage();
+    public String getGreeting() {
+        return super.getGreeting()+ addImage();
     }
 
-    private void addImage() {
-        LogUtil.d("添加一个图片表情");
+    private String addImage() {
+        return "添加一个图片表情";
     }
 }
